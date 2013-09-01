@@ -20,7 +20,8 @@ $DocumentClassification['CommercialDetection']=$DatumboxAPI->CommercialDetection
 $DocumentClassification['EducationalDetection']=$DatumboxAPI->EducationalDetection($text);
 $DocumentClassification['GenderDetection']=$DatumboxAPI->GenderDetection($text);
 
-
+$tweet="I love the new Datumbox API! :)";
+$DocumentClassification['TwitterSentimentAnalysis']=$DatumboxAPI->SentimentAnalysis($tweet);
 
 //Example of using Information Retrieval API Functions
 $InformationRetrieval=array();
