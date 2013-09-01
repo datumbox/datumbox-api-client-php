@@ -88,7 +88,7 @@ class DatumboxAPI {
     /**
     * Performs Sentiment Analysis on Twitter.
     * 
-    * @param string $text The tweet that we evaluate.
+    * @param string $text The text of the tweet that we evaluate.
     * 
     * @return string|false It returns "positive", "negative" or "neutral" on success and false on fail.
     */
