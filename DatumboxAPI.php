@@ -86,6 +86,23 @@ class DatumboxAPI {
     }
     
     /**
+    * Performs Sentiment Analysis on Twitter.
+    * 
+    * @param string $text The tweet that we evaluate.
+    * 
+    * @return string|false It returns "positive", "negative" or "neutral" on success and false on fail.
+    */
+    public function TwitterSentimentAnalysis($text) {
+        $parameters=array(
+            'text'=>$text,
+        );
+        
+        $jsonreply=$this->CallWebService('TwitterSentimentAnalysis',$parameters);
+        
+        return $this->ParseReply($jsonreply);
+    }
+    
+    /**
     * Performs Subjectivity Analysis.
     * 
     * @param string $text The clear text (no HTML tags) that we evaluate.
